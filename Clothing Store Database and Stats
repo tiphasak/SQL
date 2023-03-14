@@ -1,0 +1,33 @@
+--create a clothing store database
+
+create table store (id integer primary key, name text, quantity integer, price integer, fabric text);
+
+insert into store values
+(1, 't-shirts', 200, 24.99, 'cotton'),
+(2, 'trousers', 200, 29.99, 'cotton'),
+(3, 'sweaters', 180, 49.99, 'cotton'),
+(4, 'jackets', 150, 89.99, 'nylon, polyester'),
+(5, 'shorts', 180, 19.99, 'cotton'),
+(6, 'dresses', 100, 34.99, 'cotton'),
+(7, 'hoodies', 180, 59.99, 'cotton'),
+(8, 'skirts', 120, 29.99, 'cotton'),
+(9, 'swim suits', 100, 24.99, 'cotton'),
+(10, 'socks', 200, 9.99, 'cotton'),
+(11, 'gloves', 150, 19.99, 'nylon, polyester'),
+(12, 'scarves', 80, 14.99, 'cotton'),
+(13, 'hats', 160, 19.99, 'polyester'),
+(14, 'bras', 140, 14.99, 'cotton'),
+(15, 'underwear', 280, 9.99, 'cotton');
+
+--display the database ordered by price.
+select * from store
+order by price asc;
+
+--what is the sum of items in the store?
+select sum(quantity)
+from store;
+
+--what is the avg price of items in the store?
+select avg(price)
+from store;
+
